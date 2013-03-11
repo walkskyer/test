@@ -49,10 +49,7 @@ if(!empty($_POST)){
     var map = new BMap.Map("container"); // 创建地图实例
     var point = new BMap.Point(117.003, 36.655); // 创建点坐标
     map.centerAndZoom(point, 15); // 初始化地图，设置中心点坐标和地图级别
-    //map.addControl(new BMap.NavigationControl());
-    /*window.setTimeout(function(){
-        map.panTo(new BMap.Point(116.409, 39.918));
-    }, 2000);*/
+
     map.addControl(new BMap.NavigationControl());
     map.addControl(new BMap.ScaleControl());
     map.addControl(new BMap.OverviewMapControl());
@@ -67,17 +64,10 @@ if(!empty($_POST)){
             map.addOverlay(marker);
             <?php }?>
     <?php } ?>
-                     // 将标注添加到地图中
 
-    var traffic = new BMap.TrafficLayer();        // 创建交通流量图层实例
-    map.addTileLayer(traffic);                   // 将图层添加到地图上
-    /*var myPushpin = new BMap.PushpinTool(map);          // 创建标注工具实例
-    myPushpin.addEventListener("markend", function(e){  // 监听事件，提示标注点坐标信息
-        alert("您标注的位置：" +
-                e.marker.getPoint().lng + ", " +
-                e.marker.getPoint().lat);
-    });
-    myPushpin.open();*/
+    /*var traffic = new BMap.TrafficLayer();        // 创建交通流量图层实例
+    map.addTileLayer(traffic);                   // 将图层添加到地图上*/
+
     map.enableScrollWheelZoom();    //启用滚轮放大缩小，默认禁用
     map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
 
@@ -127,10 +117,15 @@ if(!empty($_POST)){
         id=id.replace('.','');
         return id;
     }
+
+    /**
+     * 添加一个marker覆盖物
+     * @param p
+     * @return {BMap.Marker}
+     */
     function addMarker(p){
         var markMenu = new BMap.ContextMenu();
         markMenu.addItem(new BMap.MenuItem('删除此标注',function(){map.removeOverlay(marker)},100));
-
 
         var marker = new BMap.Marker(p,{enableDragging: true,
             raiseOnDrag: true
@@ -160,9 +155,12 @@ if(!empty($_POST)){
                     'name="locations[]" type="text" value="'+ point.lng+','+ point.lat+'" /><br>';
             $('#location-info').html($('#location-info').html()+locationInfo);
         });
+
+        //将定位信息存入表单
         var locationInfo='<input id="'+lng_lat(p.lng, p.lat)+'"' +
                 'name="locations[]" type="text" value="'+ p.lng+','+ p.lat+'" /><br>';
         $('#location-info').html($('#location-info').html()+locationInfo);
+
         return marker;
     }
 </script>
