@@ -1,0 +1,8 @@
+
+.pop_blank{ position:absolute; display:none; z-index:19; background:#FFF; border:#999  1px; border-style:ridge;}
+	.pop_blank .title{  height:24px; margin:2px ;font-size:14px; font-weight:700; line-height:24px; background: #F57A04; border: #999 solid 1px;}
+		.pop_blank .title strong{ float:left; text-align: center; width: 100%; color: white }
+		.pop_blank .title .cancel{float:right; margin:6px 6px 6px 10px;; color:#999; font-weight:400; cursor:pointer; line-height:12px; border:#999  1px solid; Vertical-align:text-top;}
+		.pop_blank .title .cancel:hover{   color: #000; text-decoration:none; border:#999  1px solid; background-color:#FCF;}
+	.pop_blank .content{  padding:5px  5px;  height:100%;}
+.pop_blank_shadow{ position:absolute; left:0px; top:0px;  z-index:17;  background:#ccc;  filter: alpha(opacity=30);/*IE*/  -moz-opacity: 0.3; /*Mozilla*/  opacity: 0.3; /*FF*/ }
