@@ -1,11 +1,218 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <META content="text/html; charset=utf8" http-equiv=Content-Type>
     <title></title>
+
+    <style>
+    /****公共样式**********/
+    body{font-size:12px; font-family:"宋体",Verdana, Arial; line-height:150%; margin:0px 0 0 0; padding:0; color:#333333;}
+    div{margin:0 auto; padding:0;}
+    h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{
+        margin:0; padding:0; border:none; list-style-type:none;
+    }
+    HTML {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    BODY {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0; background-image: url(http://www.5jrs.com/images/upload/Image/beijing.jpg); background-attachment:fixed;
+    }
+    DIV {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px auto; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0; background-color:#ffffff
+    }
+    SPAN {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    APPLET {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    OBJECT {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    .uline {
+        TEXT-DECORATION: underline
+    }
+    IFRAME {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H1 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H2 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H3 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H4 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H5 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H6 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    P {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    PRE {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    A {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    CODE {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DEL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    EM {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    IMG {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    STRONG {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    SUB {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    SUP {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    B {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    U {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    I {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DT {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DD {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    OL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    UL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    LI {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    FIELDSET {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    FORM {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    LABEL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TABLE {
+
+    }
+    TBODY {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TFOOT {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    THEAD {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TR {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TH {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TD {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TABLE {
+
+    }
+    ADDRESS {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    CAPTION {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    CITE {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    CODE {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    DFN {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    EM {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    STRONG {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    TH {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    VAR {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    OL {
+        LIST-STYLE-TYPE: none
+    }
+    UL {
+        LIST-STYLE-TYPE: none
+    }
+    CAPTION {
+        FONT-WEIGHT: normal; TEXT-ALIGN: left
+    }
+    TH {
+        FONT-WEIGHT: normal; TEXT-ALIGN: left
+    }
+    TH {
+        VERTICAL-ALIGN: middle
+    }
+    TD {
+        VERTICAL-ALIGN: middle
+    }
+    H1 {
+        FONT-WEIGHT: normal
+    }
+    H2 {
+        FONT-WEIGHT: normal
+    }
+    H3 {
+        FONT-WEIGHT: normal
+    }
+    H4 {
+        FONT-WEIGHT: normal
+    }
+    H5 {
+        FONT-WEIGHT: normal
+    }
+    H6 {
+        FONT-WEIGHT: normal
+    }
+    /*********公共样式***********/
+    </style>
 </head>
 <body>
+<div style="height: 2000px;">这个特效来自于http://www.anjiajiu.com/</div>
 <link href="OKQQ/images/common.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="js/FixedKF.js"></script>
+<script type="text/javascript" src="OKQQ/images/FixedKF.js"></script>
 <style>
     #BottomNav {
         /*background: #9F6;*/
@@ -16,10 +223,13 @@
         left: 10px;
 
         width:120px;
-        _position: absolute;
-        _top: expression(documentElement.scrollTop-10 + documentElement.clientHeight-this.offsetHeight);
-        overflow: visible;}
-
+        /*position: absolute;
+        top: expression(documentElement.scrollTop-10 + documentElement.clientHeight-this.offsetHeight);*/
+        overflow: visible;
+    }
+    #BottomNav li{
+        list-style:none;
+    }
 </style>
 <script language="javascript">
     function xianshi()
@@ -43,7 +253,7 @@
     <div class="shrink_s13" id="show_one" style="display:none;"><a href="javascript:xianshi();"><img src="OKQQ/images/s13/shrink.jpg" /></a></div>
 
     <div class="expansion_s13" style="display:block;" id="show_two">
-        <div><a href="javascript:guanbi();"title="点击关闭"><img src="OKQQ/images/s13/close.png" /></a></div>
+        <div style="height: 24px;"><a href="javascript:guanbi();" title="点击关闭"><img src="OKQQ/images/s13/close.png" /></a></div>
         <div class="common common_s13">
 
             <h1>售前客服</h1>
