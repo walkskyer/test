@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <META content="text/html; charset=utf8" http-equiv=Content-Type>
+    <title></title>
+
+    <style>
+    /****公共样式**********/
+    body{font-size:12px; font-family:"宋体",Verdana, Arial; line-height:150%; margin:0px 0 0 0; padding:0; color:#333333;}
+    div{margin:0 auto; padding:0;}
+    h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{
+        margin:0; padding:0; border:none; list-style-type:none;
+    }
+    HTML {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    BODY {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0; background-image: url(http://www.5jrs.com/images/upload/Image/beijing.jpg); background-attachment:fixed;
+    }
+    DIV {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px auto; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0; background-color:#ffffff
+    }
+    SPAN {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    APPLET {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    OBJECT {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    .uline {
+        TEXT-DECORATION: underline
+    }
+    IFRAME {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H1 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H2 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H3 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H4 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H5 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    H6 {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    P {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    PRE {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    A {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    CODE {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DEL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    EM {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    IMG {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    STRONG {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    SUB {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    SUP {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    B {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    U {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    I {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DT {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    DD {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    OL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    UL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    LI {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    FIELDSET {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    FORM {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    LABEL {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TABLE {
+
+    }
+    TBODY {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TFOOT {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    THEAD {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TR {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TH {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TD {
+        BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 100%; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: baseline; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px; outline: 0
+    }
+    TABLE {
+
+    }
+    ADDRESS {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    CAPTION {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    CITE {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    CODE {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    DFN {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    EM {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    STRONG {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    TH {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    VAR {
+        FONT-WEIGHT: normal; FONT-STYLE: normal
+    }
+    OL {
+        LIST-STYLE-TYPE: none
+    }
+    UL {
+        LIST-STYLE-TYPE: none
+    }
+    CAPTION {
+        FONT-WEIGHT: normal; TEXT-ALIGN: left
+    }
+    TH {
+        FONT-WEIGHT: normal; TEXT-ALIGN: left
+    }
+    TH {
+        VERTICAL-ALIGN: middle
+    }
+    TD {
+        VERTICAL-ALIGN: middle
+    }
+    H1 {
+        FONT-WEIGHT: normal
+    }
+    H2 {
+        FONT-WEIGHT: normal
+    }
+    H3 {
+        FONT-WEIGHT: normal
+    }
+    H4 {
+        FONT-WEIGHT: normal
+    }
+    H5 {
+        FONT-WEIGHT: normal
+    }
+    H6 {
+        FONT-WEIGHT: normal
+    }
+    /*********公共样式***********/
+    </style>
+</head>
+<body>
+<div style="height: 2000px;">这个特效来自于http://www.anjiajiu.com/</div>
+<link href="OKQQ/images/common.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="OKQQ/images/FixedKF.js"></script>
+<style>
+    #BottomNav {
+        /*background: #9F6;*/
+        margin:0 auto;
+        z-index: 999;
+        position: fixed;
+        top: 20px;
+        left: 10px;
+
+        width:120px;
+        /*position: absolute;
+        top: expression(documentElement.scrollTop-10 + documentElement.clientHeight-this.offsetHeight);*/
+        overflow: visible;
+    }
+    #BottomNav li{
+        list-style:none;
+    }
+</style>
+<script language="javascript">
+    function xianshi()
+    {
+        var showone = document.getElementById('show_one');
+        var showtwo = document.getElementById('show_two');
+        showone.style.display = "none";
+        showtwo.style.display = "block";
+    }
+
+    function guanbi()
+    {
+        var showone = document.getElementById('show_one');
+        var showtwo = document.getElementById('show_two');
+        showone.style.display = "block";
+        showtwo.style.display = "none";
+    }
+
+</script>
+<div id="BottomNav">
+    <div class="shrink_s13" id="show_one" style="display:none;"><a href="javascript:xianshi();"><img src="OKQQ/images/s13/shrink.jpg" /></a></div>
+
+    <div class="expansion_s13" style="display:block;" id="show_two">
+        <div style="height: 24px;"><a href="javascript:guanbi();" title="点击关闭"><img src="OKQQ/images/s13/close.png" /></a></div>
+        <div class="common common_s13">
+
+            <h1>售前客服</h1>
+            <ul>
+                <li><span></span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=962153639&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:962153639:41" title="小六"></a></li>
+                <li><span></span><a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=&site=cntaobao&s=1&charset=utf-8" alt="" /></a></li>
+
+
+            </ul>
+
+            <h1>售后客服</h1>
+            <ul>
+                <li><span></span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=253460970&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:253460970:41" title="小刀马"></a></li>
+                <li><span></span><a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=&site=cntaobao&s=1&charset=utf-8" alt="" /></a></li>
+            </ul>
+            <h1>官方服务群</h1>
+            <ul>
+
+                <li>
+                    <a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=9e25f1d94fec654ac34cc1e62ae2a9516c0a5536097b8c5ea181afc0ed26b0f7"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="潍坊新浪搜房装修总群" title="潍坊新浪搜房装修总群"></a>
+                </li>
+            </ul>
+            <h1>分享到</h1>
+            <ul>
+                <li class="sp">
+                    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                        <a class="bds_kaixin001"></a>
+                        <span class="bds_more"></span>
+                    </div>
+                </li>
+            </ul>
+            <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=13844" ></script>
+            <script type="text/javascript" id="bdshell_js"></script>
+            <script type="text/javascript">
+                var bds_config = {'review':'off'};
+                var bds_config = {'bdText':'酷站代码 - 网页特效、jQuery幻灯、flash幻灯等源码大全，是您建站好帮手！www.5icool.org'};
+                var bds_config = {'bdDesc':'精选网页特效源码，提供jQuery特效、js特效、js幻灯片、Flash幻灯、图片特效、在线客服代码、建站素材、网页模板等'};
+                var bds_config = {'bdComment':'很不错的js特效网站，有许多炫酷的幻灯源码和教程！'};
+                document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+            </script>
+            <h1>客服热线</h1>
+            <div class="qqtel">0536-8527775</div>
+            <h1>营业时间</h1>
+            <div class="time">8:00-21:00</div>
+        </div>
+        <div><a href="javascript:void(0);"onclick='window.scrollTo(0,0);' title="返回顶部"><img src="OKQQ/images/s13/endbg.png" /></a></div>
+    </div>
+</div>
+</body>
+</html>
