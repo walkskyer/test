@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<link href="OKQQ/images/common.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/FixedKF.js"></script>
+<style>
+    #BottomNav {
+        /*background: #9F6;*/
+        margin:0 auto;
+        z-index: 999;
+        position: fixed;
+        top: 20px;
+        left: 10px;
+
+        width:120px;
+        _position: absolute;
+        _top: expression(documentElement.scrollTop-10 + documentElement.clientHeight-this.offsetHeight);
+        overflow: visible;}
+
+</style>
+<script language="javascript">
+    function xianshi()
+    {
+        var showone = document.getElementById('show_one');
+        var showtwo = document.getElementById('show_two');
+        showone.style.display = "none";
+        showtwo.style.display = "block";
+    }
+
+    function guanbi()
+    {
+        var showone = document.getElementById('show_one');
+        var showtwo = document.getElementById('show_two');
+        showone.style.display = "block";
+        showtwo.style.display = "none";
+    }
+
+</script>
+<div id="BottomNav">
+    <div class="shrink_s13" id="show_one" style="display:none;"><a href="javascript:xianshi();"><img src="OKQQ/images/s13/shrink.jpg" /></a></div>
+
+    <div class="expansion_s13" style="display:block;" id="show_two">
+        <div><a href="javascript:guanbi();"title="点击关闭"><img src="OKQQ/images/s13/close.png" /></a></div>
+        <div class="common common_s13">
+
+            <h1>售前客服</h1>
+            <ul>
+                <li><span></span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=962153639&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:962153639:41" title="小六"></a></li>
+                <li><span></span><a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=&site=cntaobao&s=1&charset=utf-8" alt="" /></a></li>
+
+
+            </ul>
+
+            <h1>售后客服</h1>
+            <ul>
+                <li><span></span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=253460970&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:253460970:41" title="小刀马"></a></li>
+                <li><span></span><a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/online.aw?v=2&uid=&site=cntaobao&s=1&charset=utf-8" alt="" /></a></li>
+            </ul>
+            <h1>官方服务群</h1>
+            <ul>
+
+                <li>
+                    <a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=9e25f1d94fec654ac34cc1e62ae2a9516c0a5536097b8c5ea181afc0ed26b0f7"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="潍坊新浪搜房装修总群" title="潍坊新浪搜房装修总群"></a>
+                </li>
+            </ul>
+            <h1>分享到</h1>
+            <ul>
+                <li class="sp">
+                    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                        <a class="bds_kaixin001"></a>
+                        <span class="bds_more"></span>
+                    </div>
+                </li>
+            </ul>
+            <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=13844" ></script>
+            <script type="text/javascript" id="bdshell_js"></script>
+            <script type="text/javascript">
+                var bds_config = {'review':'off'};
+                var bds_config = {'bdText':'酷站代码 - 网页特效、jQuery幻灯、flash幻灯等源码大全，是您建站好帮手！www.5icool.org'};
+                var bds_config = {'bdDesc':'精选网页特效源码，提供jQuery特效、js特效、js幻灯片、Flash幻灯、图片特效、在线客服代码、建站素材、网页模板等'};
+                var bds_config = {'bdComment':'很不错的js特效网站，有许多炫酷的幻灯源码和教程！'};
+                document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+            </script>
+            <h1>客服热线</h1>
+            <div class="qqtel">0536-8527775</div>
+            <h1>营业时间</h1>
+            <div class="time">8:00-21:00</div>
+        </div>
+        <div><a href="javascript:void(0);"onclick='window.scrollTo(0,0);' title="返回顶部"><img src="OKQQ/images/s13/endbg.png" /></a></div>
+    </div>
+</div>
+</body>
+</html>
