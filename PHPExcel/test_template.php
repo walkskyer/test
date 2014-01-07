@@ -24,7 +24,7 @@ $columns=array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','
 $rows=8+3;//从第三行开始实际输出8行。模版中实际的数据位置。
 for($i=3;$i < $rows;$i++){
     foreach ($columns as $key=>$col) {
-        $sheet->setCellValue($col.$i,$col.$i);
+        $sheet->setCellValue($col.$i,$col.$i.'数据位置');
     }
 }
 /** PHPExcel_Writer_Excel5 */
