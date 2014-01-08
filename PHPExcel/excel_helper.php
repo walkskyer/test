@@ -8,6 +8,14 @@
 
 if(!defined('API_PATH')) define('API_PATH',realpath(dirname(__FILE__).'/Classes'));
 if(!function_exists('excel_2003')){
+    /**
+     * @param $data 存储数据的二维数组
+     * @param $target_name 要保存的目标文件名称
+     * @param $start_row 开始写入数据的行
+     * @param $columns 需要写入数据的列
+     * @param $template 模板文件
+     * @param bool $output 是否直接通过网页下载
+     */
     function excel_2003($data,$target_name,$start_row,$columns,$template,$output=true){
         if(empty($data))
         if(empty($start_row)) $start_row=1;
@@ -20,10 +28,11 @@ if(!function_exists('excel_2003')){
         $sheet=$excel->getActiveSheet();
         if(empty($columns)) $columns=array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
 
-        $currRow=$start_row;//从第三行开始实际输出8行。模版中实际的数据位置。
+        $currRow=$start_row;
         foreach($data as $row){
             foreach($row as $key=>$val){
-                $sheet->setCellValue($columns[$key].$currRow,$val);
+                $sheet->setCellValue($columns[$key].$currRow,$val);//使用这个方法PHPExcel会过滤数据
+                //$sheet->setCellValueExplicit($columns[$key].$currRow,$val);//使用这个方法可以避免PHPExcel过滤数据，只将源数据作为文本直接输出。
             }
             $currRow++;
         }
@@ -40,6 +49,12 @@ if(!function_exists('excel_2003')){
 }
 
 if(!function_exists('export_excel')){
+    /**
+     * 将文件输出至网页下载，数据源可以是文件也可以是Excel实例
+     * @param $outputName 要保存的文件名
+     * @param bool $fileName 源文件名
+     * @param bool $writer 源数据
+     */
     function export_excel($outputName,$fileName=false, $writer=false){
         header('Content-Type: application/vnd.ms-excel');
         header("Content-Type: application/force-download");
