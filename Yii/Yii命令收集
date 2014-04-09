@@ -1,0 +1,3 @@
+创建更新语言包文件
+	yiic message messages/config.php
+	会根据config.php中的配置，建立和更新语言包的目录，通过搜索项目文件，添加语言文件中的数组KEY，值为''，等待程序员翻译。
