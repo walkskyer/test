@@ -8,7 +8,12 @@
  */
 if(!empty($_GET)){
     echo 'get is not empty';
+    echo var_dump($_GET);
+    exit;
 }
 if(!empty($_POST)){
-    echo 'post is not empty';
+    echo 'post is not empty<br/>';
+    echo var_dump($_POST);
+    exit;
 }
+echo 'no post or get data';
