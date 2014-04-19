@@ -7,19 +7,19 @@ if(!$url){
 	exit;
 }
 if(strpos($url,'youku.com') || strpos($url,'_wd1')){
-	getYouku($url);
+    $urllist2 = getYouku($url);
 }
 elseif(strpos($url,'tudou.com') || strpos($url,'_wd2')){
-	gettudou($url);
+    $urllist2 = gettudou($url);
 }
 elseif(strpos($url,'letv.com') || strpos($url,'_wd3')){
-	getletv($url);
+    $urllist2 = getletv($url);
 }
 elseif(strpos($url,'56.com') || strpos($url,'_wd4')){
-	get56($url);
+    $urllist2 = get56($url);
 }
 elseif(strpos($url,'ku6.com') || strpos($url,'_wd5')){
-	getku6($url);
+    $urllist2 = getku6($url);
 }
 else{
 	$urllist2='<?xml version="1.0" encoding="utf-8"?>'.chr(13);
@@ -31,9 +31,12 @@ else{
     $urllist2.='                        <file>'.$url.'</file>'.chr(13);
     $urllist2.='                </video>'.chr(13);
     $urllist2.='        </ckplayer>';
-    echo $urllist2;
-	exit;
+    //echo $urllist2;
+    //return $urllist2;
 }
+echo $urllist2;
+exit;
+
 function getku6($url){
 	if(strpos($url,'html')){
 		$arr=explode('/',$url);
@@ -64,7 +67,8 @@ function getku6($url){
 	$urllist2.='	</flashvars>'.chr(13);
 	$urllist2.='	'.$wd4;
 	$urllist2.='	</ckplayer>';
-	echo $urllist2;
+	//echo $urllist2;
+    return $urllist2;
 }
 function get56($url){
 	if(strpos($url,'v_')){
@@ -76,7 +80,7 @@ function get56($url){
 	$content=get_curl_contents('http://vxml.56.com/json/'.$wd.'/?src=out');
 	$data=json_decode($content);
 	$wd2=$data->info->rfiles;
-	for($i==0;$i<count($wd2);$i++){
+	for($i=0;$i<count($wd2);$i++){
 		$type=$wd2[$i]->type;
 		if($type=='normal'){
 			$wd3=$wd2[$i]->url;
@@ -95,26 +99,28 @@ function get56($url){
 	$urllist2.='			<file>'.$wd3.'</file>'.chr(13);
 	$urllist2.='		</video>'.chr(13);
 	$urllist2.='	</ckplayer>';
-	echo $urllist2;
+	//echo $urllist2;
+    return $urllist2;
 }
 function getletv($url){
 	if(strpos($url,'swf')){
 		$wd=inter($url,'swf?id=','&');
-		loadletvxml($wd);
+		 return loadletvxml($wd);
 	}
 	elseif(strpos($url,'wd3')){
-		loadletvxml(str_replace('_wd3','',$url));
+		return loadletvxml(str_replace('_wd3','',$url));
 	}
 	else{
-		loadletvurl($url);	
+		return loadletvurl($url);
 	}
 }
 function loadletvurl($url){
 	$content=get_curl_contents($url);
 	$wd=inter($content,'vid:',',');
 	if($wd){
-		loadletvxml($wd);
+		return loadletvxml($wd);
 	}
+    return '';
 }
 function loadletvxml($url){
 	$content=get_curl_contents('http://app.letv.com/v.php?id='.$url);
@@ -136,7 +142,8 @@ function loadletvxml($url){
 	$urllist2.='			<file>'.$wd6.'</file>'.chr(13);
 	$urllist2.='		</video>'.chr(13);
 	$urllist2.='	</ckplayer>';
-	echo $urllist2;
+	//echo $urllist2;
+    return $urllist2;
 }
 
 function gettudou($url){
@@ -145,13 +152,13 @@ function gettudou($url){
 		if(strpos($wd,'swf')){
 			$wd=inter($url,'iid=','&');
 		}
-		loadtudou($wd);
+		return loadtudou($wd);
 	}
 	elseif(strpos($url,'_wd2')){
-		loadtudou(str_replace('_wd2','',$url));
+		return loadtudou(str_replace('_wd2','',$url));
 	}
 	else{
-		loadtudouurl($url);
+		return loadtudouurl($url);
 	}
 }
 function loadtudou($url){
@@ -166,7 +173,8 @@ function loadtudou($url){
 	$urllist2.='			<file>'.$wd.'</file>'.chr(13);
 	$urllist2.='		</video>'.chr(13);
 	$urllist2.='	</ckplayer>';
-	echo $urllist2;
+	//echo $urllist2;
+    return $urllist2;
 }
 function loadtudouurl($url){
 	$content=get_curl_contents($url);
@@ -175,11 +183,11 @@ function loadtudouurl($url){
 		$wd=inter($content,'vcode: \'','\'');	
 	}
 	if ($wd){
-		getYouku($wd);
+		return getYouku($wd);
 	}
 	else{
 		$wd=inter($content,'iid:',',');
-		loadtudou($wd);
+		return loadtudou($wd);
 	}
 }
 function getYouku($url){
@@ -230,7 +238,8 @@ function getYouku($url){
 	$urllist2.='	</flashvars>'.chr(13);
 	$urllist2.=$urllist;
 	$urllist2.='	</ckplayer>';
-	echo $urllist2;
+	//echo $urllist2;
+    return $urllist2;
 }
 function numx($url,$g){
 	$num=0;
