@@ -85,7 +85,7 @@
 			3、播放器最小宽度
 			4、播放器最小高度
 		-->
-		<mylogo>logo.swf</mylogo>
+		<mylogo>logo.png</mylogo>
 		<!--
 		视频加载前显示的logo文件，不使用设置成<mylogo>null</mylogo>
 		-->

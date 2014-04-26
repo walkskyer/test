@@ -108,7 +108,7 @@ function ckstyle() { //定义总的风格
 		3、播放器最小宽度
 		4、播放器最小高度
 	*/
-	mylogo:'logo.swf',
+	mylogo:'logo.png',
 	/*
 	视频加载前显示的logo文件，不使用设置成null，即ck.mylogo='null';
 	*/
